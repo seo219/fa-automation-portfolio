@@ -40,6 +40,19 @@ PLC 제어 · 구동 및 네트워크 · 산업용 로봇 · Python 설비 연�
 | 로봇 반복 이송·팔레타이징 | TCP 상대 이동, 5×5 좌표 생성, 그리퍼·진공 제어 | 좌표계 이해, 반복 패턴, Pick & Place | [프로젝트 보기](docs/robot-control.md) |
 | 공압·유압 회로 실습 | 밸브 배관, 실린더 왕복, 유압 모터 구동 | 회로와 실제 액추에이터 동작 연결 | [실습 보기](docs/fluid-power.md) |
 
+## 코딩 포트폴리오
+
+Python 자동화 코드를 **함수 구조·좌표 계산·통신·예외 처리** 관점에서 정리했습니다.
+
+| 개발 포인트 | 대표 코드 |
+|---|---|
+| 계산과 장비 제어의 함수 분리 | 팔레타이징·TCP 접근점 생성 |
+| 비동기 장비의 완료 확인 | motion_id와 타임아웃 기반 대기 |
+| 외부 장치 통신과 상태 관리 | PLC START/DONE 핸드셰이크 |
+| 코드 검토와 실행 조건 | 미설정 좌표, 주석·인자 차이, SDK 설정 |
+
+[코딩 포트폴리오 상세 보기](docs/coding-portfolio.md)
+
 ## 설비 연동 대표 흐름
 
 ```mermaid
@@ -88,6 +101,7 @@ sequenceDiagram
 ```text
 README.md                       포트폴리오 첫 화면
 docs/
+  coding-portfolio.md           Python 코드 구조·핵심 로직
   ai-yutnori-robot-arm.md        AI 로봇 윷놀이 · 대표 팀 프로젝트
   plc-robot-handshake.md         PLC·Python·로봇 연동
   plc-control.md                 순차·인버터·서보·CC-Link 제어
